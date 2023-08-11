@@ -17,11 +17,21 @@ int main(void)
 		for (j = i; j < 10; j++)
 		{
 			if (i != j)
+			{
 				putchar(i + 48);
 				putchar(j + 48);
-				putchar(',');
-				putchar(' ');
+				if (i == 8 && j == 9)
+				{
+					putchar('\n');
+				}
+				else
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
 		}
 	}
-	putchar('\n');
+
+	return (0);
 }
