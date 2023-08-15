@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _abc - function that prints the absolute value
+ * _abs - function that prints the absolute value
  *
  * @n: takes integer input to function
  *
