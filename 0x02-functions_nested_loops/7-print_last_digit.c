@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * print_last_digit - prints the last digit 
+ * print_last_digit - prints the last digit
  *
- * @m: takes number input
+ * @n: takes number input
  *
  * Return: last
  */
