@@ -36,7 +36,7 @@ void lpm(long int num)
 
 	while (num % 2 == 0)
 		num = num / 2;
-	for (prm = 3; prm <= sqrt(num); prm += 2)
+	for (prm = 3; prm <= _sqrt(num); prm += 2)
 	{
 		while (num % prm == 0)
 		{
