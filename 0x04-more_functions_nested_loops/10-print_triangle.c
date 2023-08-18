@@ -19,9 +19,9 @@ void print_triangle(int size)
 	{
 		for (hight = 1; hight <= size; hight++)
 		{
-			for (base = 1; base <= size; base++)
+			for (space = 1; space <= size; space++)
 			{
-				if ((hight + base) <= size)
+				if ((hight + space) <= size)
 					_putchar(' ');
 				else
 					_putchar('#');
