@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 /**
  * infinite_add - Adds two numbers.
@@ -15,8 +16,8 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	int i, len1, len2, biggest, index = 0, sum, carry = 0;
 	char tmp;
 
-	len1 = _strlen(n1);
-	len2 = _strlen(n2);
+	len1 = strlen(n1);
+	len2 = strlen(n2);
 
 	biggest = len1 > len2 ? len1 : len2;
 
@@ -30,15 +31,12 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		sum = carry;
 
 		if (len1 >= 0)
-			sum += n1[len1] - '0';
-			len1--;
+			sum += n1[len1--] - '0';
 		if (len2 >= 0)
-			sum += n2[len2] - '0';
-			len2--;
+			sum += n2[len2--] - '0';
 
 		carry = sum / 10;
-		r[index] = sum % 10 + '0';
-		index++;
+		r[index++] = sum % 10 + '0';
 	}
 
 	r[index] = '\0';
