@@ -21,11 +21,11 @@ void print_diagsums(int *a, int size)
 		{
 			if (i == j)
 			{
-				diag1 += a[i][j];
+				diag1 += *a[i][j];
 			}
 			if (j == size - i - 1)
 			{
-				diag2 += a[i][j];
+				diag2 += *a[i][j];
 			}
 		}
 	}
