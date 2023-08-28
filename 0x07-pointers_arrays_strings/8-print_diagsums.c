@@ -21,5 +21,5 @@ void print_diagsums(int *a, int size)
 		secondaryDiagonalSum += *(a + i * size + (size - i - 1));
 	}
 
-	printf("Main diagonal sum: %d, %d\n", mainDiagonalSum, secondaryDiagonalSum);
+	printf("%d, %d\n", mainDiagonalSum, secondaryDiagonalSum);
 }
