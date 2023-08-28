@@ -10,9 +10,9 @@
 
 void print_diagsums(int *a, int size)
 {
-	int i, j, mainDiagonalSum, secondaryDiagonalSum;
+	int i, mainDiagonalSum, secondaryDiagonalSum;
 
-	for (int i = 0; i < size; i++)
+	for (i = 0; i < size; i++)
 	{
 		mainDiagonalSum += *(a + i * size + i);
 		secondaryDiagonalSum += *(a + i * size + (size - i - 1));
