@@ -22,7 +22,6 @@ unsigned int _strspn(char *s, char *accept)
 			if (s[i] == accept[j] && s[i] != ',')
 			{
 				count++;
-				continue;
 			}
 			if (s[i] == ',')
 			{
