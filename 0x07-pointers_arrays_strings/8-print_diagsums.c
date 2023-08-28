@@ -29,4 +29,5 @@ void print_diagsums(int *a, int size)
 			}
 		}
 	}
+	printf("%d, %d", diag1, diag2);
 }
