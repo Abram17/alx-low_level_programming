@@ -6,6 +6,7 @@
  * @n: input number
  *
  * Return: square root of n
+ *         -1 if number doesn't have sqrt
 */
 
 int _sqrt_recursion(int n)
@@ -14,12 +15,13 @@ int _sqrt_recursion(int n)
 }
 
 /**
- * squareRoot - calculate
+ * squareRoot - calculate sqrt
  *
  * @n: number
  * @guess: guessed sqrt
  *
  * Return: sqrt
+ *         -1 if it's not valid
 */
 int squareRoot(int n, int guess)
 {
