@@ -1,78 +1,73 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
 
 /**
- * coinConverter - Helper function that does all the mathematics
- * @i: Passed in variable from main for calculations
- * Return: The number of coins needed minimum for the passed in variable
- */
-int coinConverter(int i)
-{
-	int count = 0;
-
-	while (i != 0)
-	{
-		if (i % 10 == 9 || i % 10 == 7)
-			i -= 2;
-		else if (i % 25 == 0)
-			i -= 25;
-		else if (i % 10 == 0)
-			i -= 10;
-		else if (i % 5 == 0)
-			i -= 5;
-		else if (i % 2 == 0)
-		{
-			if (i % 10 == 6)
-				i -= 1;
-			else
-				i -= 2;
-		}
-		else
-			i -= 1;
-
-		count++;
-	}
-
-	return (count);
-}
-
-/**
- * main - Program that takes in all integer arguments and returns the sum
- * @argc: Number of command line arguments
- * @argv: Array name
- * Return: 1 if a non-integer is among the passed in arguments, 0 otherwise
- */
+ * main - Entry point
+ *
+ * @argc: arguments count
+ * @argv: array of arguments
+ *
+ * Return: 0 (success)
+ *         1 (fail)
+*/
 
 int main(int argc, char *argv[])
 {
-	int i, j, length, sum;
-	char *ptr;
+	int x, i, j, k, l, m, n, o, p, q;
 
-	if (argc < 2)
-		printf("0\n");
+	if (argc != 2)
+	{
+		printf("Error\n");
+		return (1);
+	}
 	else
 	{
-		sum = 0;
-		for (i = 1; i < argc; i++)
+		x = atoi(argv[1]);
+		i = x / 25;
+		j = x % 25;
+		k = j / 10;
+		l = j % 10;
+		m = l / 5;
+		n = l % 5;
+		o = n / 2;
+		p = n % 2;
+		q = p / 1;
+		if (x < 0)
 		{
-			ptr = argv[i];
-			length = strlen(ptr);
-
-			for (j = 0; j < length; j++)
+			printf("0\n");
+		}
+		else
+		{
+			if (j == 0)
 			{
-				if (isdigit(*(ptr + j)) == 0)
+				printf("%d\n", i);
+			}
+			else
+			{
+				if (l == 0)
 				{
-					printf("Error\n");
-					return (1);
+					printf("%d\n", i + k);
+				}
+				else
+				{
+					if (n == 0)
+					{
+						printf("%d\n", i + k + m);
+					}
+					else
+					{
+						if (p == 0)
+						{
+							printf("%d\n", i + k + m + o);
+						}
+						else
+						{
+							printf("%d\n", i + k + m + o + q);
+						}
+					}
 				}
 			}
-
-			sum += atoi(argv[i]);
 		}
-
-	printf("%d\n", sum);
+		return (0);
 	}
-	return (0);
 }
