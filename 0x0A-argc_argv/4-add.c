@@ -31,6 +31,10 @@ int main(int argc, char *argv[])
 				printf("Error\n");
 				return (1);
 			}
+			else
+			{
+				continue;
+			}
 		}
 
 		for (i = 1; i < argc; i++)
