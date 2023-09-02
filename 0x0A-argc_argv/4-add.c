@@ -19,7 +19,6 @@ int main(int argc, char *argv[])
 	char *ptr;
 
 	sum = 0;
-
 	if (argc != 1)
 	{
 		for (i = 1; i < argc; i++)
@@ -36,7 +35,6 @@ int main(int argc, char *argv[])
 				continue;
 			}
 		}
-
 		for (i = 1; i < argc; i++)
 		{
 			temp = strtol(argv[i], NULL, 10);
@@ -54,7 +52,7 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		printf("0\n");
+		printf("%d\n", 0);
 	}
 	return (0);
 }
