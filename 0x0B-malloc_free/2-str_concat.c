@@ -12,7 +12,8 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	unsigned int i, j;
+	unsigned int i;
+	unsigned int j = 0;
 	char *s3;
 	unsigned int l = sizeof(s1);
 	unsigned int m = sizeof(s2);
@@ -30,11 +31,12 @@ char *str_concat(char *s1, char *s2)
 
 	for (i = 0; i < l; i++)
 		s3[i] = s1[i];
-
-	for (j = 0; j < m; j++)
-		s3[i + j - 1] = s2[j];
-
-	s3[i + j - 1] = '\0';
+	for (; j < m; i++)
+	{
+		s3[i] = s2[j];
+		j++;
+	}
+	s3[i + j] = '\0';
 
 	return (s3);
 }
