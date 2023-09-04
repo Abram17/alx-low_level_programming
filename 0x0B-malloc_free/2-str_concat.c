@@ -1,41 +1,39 @@
 #include "main.h"
 
 /**
- * str_concat - concatinate two strings
- *
- * @s1: first string
- * @s2: second string
- *
- * Return: pointer to the new string if success
- *         NULL if failed
-*/
-
+ * str_concat - Entry point
+ *@s1: string 1
+ *@s2: string 2
+ * Return: pointer should point to a newly allocated space in memory or NULL
+ */
 char *str_concat(char *s1, char *s2)
 {
+	char *strnew = NULL;
 	unsigned int i;
-	unsigned int j = 0;
-	char *s3;
-	unsigned int l = sizeof(s1);
-	unsigned int m = sizeof(s2);
+	int n1;
+	int n2;
+	int count;
 
-	s3 = malloc((l + m) * sizeof(char));
-
-	if (s3 == NULL)
-		return (NULL);
-
+	count = 0;
 	if (s1 == NULL)
 		s1 = "";
-
 	if (s2 == NULL)
 		s2 = "";
-
-	for (i = 0; i < l; i++)
-		s3[i] = s1[i];
-	for (; j < m; i++)
+	for (n1 = 0; s1[n1] != '\0'; n1++)
+		;
+	for (n2 = 0; s2[n2] != '\0'; n2++)
+		;
+	strnew = (char *)malloc((n1 + n2 + 1) * sizeof(char));
+	if (strnew == NULL)
 	{
-		s3[i] = s2[j];
-		j++;
+		return (NULL);
 	}
-
-	return (s3);
+	for (i = 0; s1[i] != '\0'; i++)
+		strnew[i] = s1[i];
+	for (; s2[count] != '\0'; i++)
+	{
+		strnew[i] = s2[count];
+		count++;
+	}
+	return (strnew);
 }
