@@ -71,6 +71,7 @@ char** strtow(char* str)
 	int wordStart = 0;
 	int wordLength = 0;
 	int isWord = 0;
+	int i;
 
 	while (*str)
 	{
@@ -81,7 +82,7 @@ char** strtow(char* str)
 				words[wordIndex] = (char*)malloc((wordLength + 1) * sizeof(char));
 				if (words[wordIndex] == NULL)
 				{
-					for (int i = 0; i < wordIndex; i++)
+					for (i = 0; i < wordIndex; i++)
 					{
 						free(words[i]);
 					}
@@ -95,7 +96,8 @@ char** strtow(char* str)
 				wordLength = 0;
 				isWord = 0;
 			}
-		} else if (!isWord)
+		}
+		else if (!isWord)
 		{
 			isWord = 1;
 			wordStart = str - 1 - wordLength;
@@ -114,7 +116,7 @@ char** strtow(char* str)
 		words[wordIndex] = (char*)malloc((wordLength + 1) * sizeof(char));
 		if (words[wordIndex] == NULL)
 		{
-			for (int i = 0; i < wordIndex; i++)
+			for (i = 0; i < wordIndex; i++)
 			{
 				free(words[i]);
 			}
