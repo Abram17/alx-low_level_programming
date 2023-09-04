@@ -60,16 +60,18 @@ char** strtow(char* str)
 		return NULL;
 	}
 
-	int numWords = countWords(str);
-	char** words = (char**)malloc((numWords + 1) * sizeof(char*));
+	int num;
+
+	num = countWords(str);
+	char** words = (char**)malloc((num + 1) * sizeof(char*));
 	if (words == NULL)
 	{
 		return NULL;
 	}
 
 	int wordIndex = 0;
-	int wordStart = 0;
 	int wordLength = 0;
+	int wordStart;
 	int isWord = 0;
 	int i;
 
