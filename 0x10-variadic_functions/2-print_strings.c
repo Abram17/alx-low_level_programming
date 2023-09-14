@@ -32,14 +32,12 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			break;
 		}
 
-		if (i == n - 1)
-		{
-			printf("%s\n", str);
+		printf("%s", str);
+		if (n == i + 1)
 			break;
-		}
-		else
-			printf("%s%s ", str, separator);
+		printf("%s", separator);
 	}
+	printf("\n");
 
 	va_end(args);
 }
