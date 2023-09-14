@@ -10,7 +10,7 @@
 
 void op_c(va_list form)
 {
-	printf("%c", va_arg(form, char));
+	printf("%c", va_arg(form, int));
 }
 
 /**
