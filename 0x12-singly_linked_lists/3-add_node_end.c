@@ -1,3 +1,8 @@
+/*
+ * File: 3-add_node_end.c
+ * Auth: Abram
+ */
+
 #include "main.h"
 
 /**
