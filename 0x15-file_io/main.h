@@ -7,6 +7,7 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <elf.h>
 
 #define READ_BUF_SIZE 1024
 
